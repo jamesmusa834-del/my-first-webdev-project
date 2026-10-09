@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Project 6 student dashboard</title>
+        <style>
+            .dashboard{
+                display:flex;
+                flex-direction:row;
+            }
+            .sidebar{
+                width:10%;
+            }
+            .main-content{
+                width:90%;
+            }
+            .cards{
+                display:flex;
+                flex-direction:row;
+                gap:20px;
+                flex-wrap:wrap;
+            }
+            .course1,.course2,.course3,.course4{
+                border:2px solid black;
+                padding:0px;
+                border-radius:10px;
+                background-color:blueviolet;
+            }
+            .course1:hover,.course2:hover,.course3:hover,.course4:hover{
+                background-color:pink;
+            }
+            .cards .press1,.cards .press2,.cards .press3,.cards .press4{
+                background-color:salmon;
+                color:white;
+            }
+            .cards .press1:hover,.cards .press2:hover,.cards .press3:hover,.cards .press4:hover{
+                background-color:royalblue;
+            }
+            @media(max-width:600px){
+                .dashboard{
+                    flex-direction:column;
+                }
+                .sidebar,
+                .main-content{
+                    width:100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Dashboard</h1>
+        <div class="dashboard">
+        <div class="sidebar">
+            <p>Dashboard</p>
+            <p>Courses</p>
+            <p>Assignments</p>
+            <p>Results</p>
+            <p>Settings</p>
+        </div>
+        <div class="main-content">
+            <p>Welcome,students!</p>
+            <div class="cards">
+                <div class="course1">
+                    <p>COURSE NAME: Introduction to Programming</p>
+                    <p>It is an introductory course to programming concepts.</p>
+                    <button class="press1">View Course</button>
+                </div>
+                <div class="course2">
+                    <p>COURSE NAME: Data Structures and Algorithms</p>
+                    <p>This course covers fundamental data structures and algorithms.</p>
+                    <button class="press2">View Course</button>
+                </div>
+                <div class="course3">
+                    <p>COURSE NAME: Web Development</p>
+                    <p>This course focuses on building web applications using HTML, CSS, and JavaScript.</p>
+                    <button class="press3">View Course</button>
+                </div>
+                <div class="course4">
+                    <p>COURSE NAME: Database Management Systems</p>
+                    <p>This course introduces the concepts of database design and management.</p>
+                    <button class="press4">View Course</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

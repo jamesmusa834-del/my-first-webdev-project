@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Project 8 responsive product/course grid</title>
+        <style>
+            .container{
+                display:grid;
+                grid-template-columns:2fr 1fr 1fr;
+                grid-template-rows:1fr 1fr 1fr;
+                gap:20px;
+            }
+            .card1{
+                grid-column:span 2;
+            }
+            .card1,.card2,.card3,.card4,.card5,.card6{
+                border:2px solid black;
+                padding:20px;
+                border-radius:10px;
+                background-color:blueviolet;
+            }
+            .card1:hover,.card2:hover,.card3:hover,.card4:hover,.card5:hover,.card6:hover{
+                background-color:pink;
+            }
+            .card1 .press1,.card2 .press2,.card3 .press3,.card4 .press4,.card5 .press5,.card6 .press6{
+                background-color:springgreen;
+                color:white;
+            }
+            .card1 .press1:hover,.card2 .press2:hover,.card3 .press3:hover,.card4 .press4:hover,.card5 .press5:hover,.card6 .press6:hover{
+                background-color:royalblue;
+            }
+            @media(max-width:600px){
+                .container{
+                    grid-template-columns:1fr;
+                    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Course Marketplace</h1>
+        <div class="container">
+            <div class="card1">
+                <p>NAME:Web Development</p>
+                <p>It builds on concepts of web development and design</p>
+                <p>PRICE:KSH.15,000</p>
+                <button class="press1">Enroll Now</button>
+            </div>
+            <div class="card2">
+                <p>NAME:Java Programming</p>
+                <p>It builds on concepts of programming and coding</p>
+                <p>PRICE:KSH.20,000</p>
+                <button class="press2">Enroll Now</button>
+            </div>
+            <div class="card3">
+                <p>NAME:Database Systems</p>
+                <p>It builds on concepts of database management and design</p>
+                <p>PRICE:KSH.18,000</p>
+                <button class="press3">Enroll Now</button>
+            </div>
+            <div class="card4">
+                <p>NAME:Computer Networks</p>
+                <p>It builds on concepts of computer networks and communication</p>
+                <p>PRICE:KSH.22,000</p>
+                <button class="press4">Enroll Now</button>
+            </div>
+            <div class="card5">
+                <p>NAME:Operating Systems</p>
+                <p>It builds on concepts of operating systems and system design</p>
+                <p>PRICE:KSH.25,000</p>
+                <button class="press5">Enroll Now</button>
+            </div>
+            <div class="card6">
+                <p>NAME:Data Structures</p>
+                <p>It builds on concepts of data structures and algorithms</p>
+                <p>PRICE:KSH.19,000</p>
+                <button class="press6">Enroll Now</button>
+            </div>
+        </div>
+    </body>
+</html>

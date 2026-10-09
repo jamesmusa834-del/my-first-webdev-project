@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>project 9 advanced css grid dashboard</title>
+        <style>
+            .head{
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            h1{
+                grid-column: span 3;
+            }
+            .dashboard{
+                display:flex;
+                flex-direction: row;
+            }
+            .sidebar{
+                width:20%;
+            }
+            .main-section{
+                width:80%;
+            }
+            .container{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap:10px;
+            }
+            .student,.courses,.assignments,.completed{
+                border:2px solid black;
+                padding:20px;
+                border-radius: 10px;
+                background-color: coral;
+            }
+            .student:hover,.courses:hover,.assignments:hover,.completed:hover{
+                background-color: aqua;
+            }
+            @media(max-width:600px){
+                .head{
+                    grid-template-columns: 1fr;
+                }
+                .dashboard{
+                    flex-direction: column;
+                }
+                .container{
+                    grid-template-columns: 1fr;
+                    grid-template-rows:1fr 1fr 1fr 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+        <h1>Admin Dashboard</h1>
+        </div>
+        <div class="dashboard">
+            <div class="sidebar">
+                <p>Dasboard</p>
+                <p>Users</p>
+                <p>Courses</p>
+                <p>Reports</p>
+                <p>Settings</p>
+            </div>
+            <div class="main-section">
+                <div class="container">
+                    <div class="student">
+                        <p>TOTAL STUDENTS:1250</p>
+                        <p>Current population of students</p>
+                    </div>
+                    <div class="courses">
+                        <p>ACTIVE COURSES:24</p>
+                        <p>The current number of courses being offered</p>
+                    </div>
+                    <div class="assignments">
+                        <p>PENDING ASSIGNMENTS:87</p>
+                        <p>The number of assignments yet to be submitted.</p>
+                    </div>
+                    <div class="completed">
+                        <p>COMPLETED COURSES:542</p>
+                        <p>Coursers passed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
